@@ -1,0 +1,8 @@
+{
+  "name": "Learning-Platform",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "8fc5676e"
+}
