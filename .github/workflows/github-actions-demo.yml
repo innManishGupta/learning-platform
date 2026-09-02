@@ -11,7 +11,7 @@ jobs:
 
     env:
       BUILD_OUTPUT: www
-      IIS_PATH: C:\inetpub\wwwroot\angular-app
+      IIS_PATH: C:\TestCICD-manish
 
     steps:
       - name: Checkout code
@@ -21,11 +21,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-
+          
+      - name: Install Ionic CLI
+        run: npm install -g @ionic/cli
+        
       - name: Install dependencies
         run: npm install
 
-      - name: Build Angular app
+      - name: Build Ionic app
         run: ionic build --prod
 
       - name: Deploy to IIS folder
