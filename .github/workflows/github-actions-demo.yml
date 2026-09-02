@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: npm run build -- --configuration production
+        run: ionic build --prod
 
       - name: Deploy to IIS folder
         shell: powershell
